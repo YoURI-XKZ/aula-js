@@ -1,0 +1,55 @@
+label,input,h1,#btnmedia,h2{
+        display:block;
+        margin-bottom: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 20px auto;
+}
+h1{
+    color: cadetblue;
+    text-align: center;
+}
+
+body{
+    background-color: midnightblue;
+}
+h2.resultadomedia{
+    font-size: 36px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+label{
+    font-size: 24px;
+    padding: 15px;
+    padding-right: 30px;
+    font-weight: bold;
+    background-color: rgb(7, 12, 10);
+    color: white;
+    width: 30%;
+    border-bottom: 2px solid rgb(231, 0, 0);
+}
+input{
+    padding: 15px;
+    border-radius: 10px;
+    width: 30%;
+    font-size: 18px;
+    padding: 15px;
+    background-color: rgb(224, 210, 210);
+}
+#btnmedia{
+    display: block;
+    border-radius:10px;
+    padding: 20px;
+    width: 30%;
+    background-color: purple;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.7s;
+
+}
+
+#btnmedia:hover{
+    cursor: pointer;
+    background-color: brown;
+
+}
