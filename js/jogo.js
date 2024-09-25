@@ -1,4 +1,4 @@
-let playerscre = 0
+let playerscr = 0
 let machinescr = 0
 
 const playerscredisplay = document.getElementById("playerscore")
@@ -28,7 +28,7 @@ function getmachinechoice(){
     const randomindex = Math.floor(Math.random()* choices.length);
     return choices [randomindex];
 
-    
+
 
 }
 ///^ random * possibilidades)  ( lengh tamanho na da variavel)
@@ -36,7 +36,33 @@ function getmachinechoice(){
 function playround(playerchoice){
     //* machinechoice recebe retorno da função getmachinechoice, escolhe 
     const machinechoice = getmachinechoice();
+    
     let result;
+
+    //^empate
+    if (playerchoice == machinechoice){
+        result = "You can live for now"
+    }
+    /////* vitoria
+    else if (
+        (playerchoice == "pedra" && machinechoice == "tesoura")||
+        (playerchoice == "papel" && machinechoice == "pedra")||
+        (playerchoice == "tesoura" && machinechoice == "papel")
+
+    )
+    {
+            result = "How you dare?"
+            playerscr++;
+    }
+    else{
+        result = "Suffer!"
+        machinescr++;
+    }
+
+    //////atualizar HTML
+    playerscredisplay.textContent = playerscr
+    machinescrdisplay.textContent = machinescr
+    resultdisplay.textContent = `You try Defeat me ${result}`
 }
 
 
